@@ -6,13 +6,161 @@ Autor: SEDIS
 Autor URI: /sedis
 Versão: 1.0
 */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+/* @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 body {
-  /* padding-top: 4.5rem; */
+  padding-top: 4.5rem;
   font-family: 'Montserrat','Helvetica Neue',Arial,sans-serif;
   color: #001A33;
-}
+} */
 
 html{
   margin: 0 !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --primary: #bc3b3bff;
+    --secondary: #c96262ff;
+}
+
+
+.nav {
+    border-width: 0;
+}
+
+.card,
+.aviso,
+.footer2 {
+    background-color: var(--secondary);
+}
+
+.footer1 {
+    height: 50px;
+}
+
+.footer2 {
+    height: 100px;
+}
+
+.nav2,
+.data,
+.data-mb,
+.footer1 {
+    background-color: var(--primary);
+}
+
+.navbar-brand {
+    color: black;
+}
+
+.card,
+.data-mb {
+    border-radius: 12px;
+}
+
+.data {
+    width: 120px;
+    height: 120px;
+}
+
+.dia {
+    font-size: 40px;
+}
+
+img,
+.btn-plus {
+    border-radius: 8px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #0066FF;
+}
+
+.container {
+    padding: 5vw;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.btn-plus {
+    background-color: #D0D0D0;
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: separate;
+    border: 1px solid black;
+    border-radius: 6px;
+    table-layout: fixed;
+    background-color: #F2F2F2;
+}
+
+td,
+th {
+    border-left: solid black 1px;
+}
+
+th {
+    border-top: none;
+}
+
+td {
+    border-bottom: none;
+}
+
+td:first-child,
+th:first-child {
+    border-left: none;
+}
+
+td ul {
+    min-height: 400px;
+}
+
+ul li {
+    list-style: none;
+}
+
+.dropdown-menu.show {
+    display: flex;
+    width: 190px;
+    flex-wrap: wrap;
+}
+
+.dropdown-item {
+    width: 33, 33%;
+}
+
+path {
+    fill: var(--primary);
+}
+
+.hoje {
+    background-color: rgba(208, 208, 208, 1);
+}
+
+.card-title {
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .thumbnail {
+        width: 50% !important;
+    }
 }

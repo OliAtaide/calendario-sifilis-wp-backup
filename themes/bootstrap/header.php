@@ -42,7 +42,7 @@
   ]);
   ?>
 </nav> -->
-  <nav class="fixed-top">
+  <nav class="">
     <div class="nav navbar navbar-expand-lg">
       <div class="container-fluid container py-0">
         <a href="index.html" class="navbar-brand">
@@ -92,42 +92,42 @@
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li>
               <a class="dropdown-item" data-index="0" href="#">
-                <img src="imgs/colors1.png" alt="">
+                <img src=<?php echo get_template_directory_uri()."/imgs/colors1.png"?> alt="">
               </a>
             </li>
             <li>
               <a class="dropdown-item" data-index="1" href="#">
-                <img src="imgs/colors2.png" alt="">
+                <img src=<?php echo get_template_directory_uri()."/imgs/colors2.png"?> alt="">
               </a>
             </li>
             <li>
               <a class="dropdown-item" data-index="2" href="#">
-                <img src="imgs/colors3.png" alt="">
+                <img src=<?php echo get_template_directory_uri()."/imgs/colors3.png"?> alt="">
               </a>
             </li>
             <li>
               <a class="dropdown-item" data-index="3" href="#">
-                <img src="imgs/colors4.png" alt="">
+                <img src=<?php echo get_template_directory_uri()."/imgs/colors4.png"?> alt="">
               </a>
             </li>
             <li>
               <a class="dropdown-item" data-index="4" href="#">
-                <img src="imgs/colors5.png" alt="">
+                <img src=<?php echo get_template_directory_uri()."/imgs/colors5.png"?> alt="">
               </a>
             </li>
             <li>
               <a class="dropdown-item" data-index="5" href="#">
-                <img src="imgs/colors6.png" alt="">
+                <img src=<?php echo get_template_directory_uri()."/imgs/colors6.png"?> alt="">
               </a>
             </li>
             <li>
               <a class="dropdown-item" data-index="6" href="#">
-                <img src="imgs/colors7.png" alt="">
+                <img src=<?php echo get_template_directory_uri()."/imgs/colors7.png"?> alt="">
               </a>
             </li>
             <li>
               <a class="dropdown-item" data-index="7" href="#">
-                <img src="imgs/colors8.png" alt="">
+                <img src=<?php echo get_template_directory_uri()."/imgs/colors8.png"?> alt="">
               </a>
             </li>
           </ul>
