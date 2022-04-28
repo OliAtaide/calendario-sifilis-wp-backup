@@ -74,7 +74,7 @@ html{
 
 img,
 .btn-plus {
-    border-radius: 8px;
+    border-radius: 8px !important;
 }
 
 .card a {
@@ -151,8 +151,11 @@ path {
     fill: var(--primary);
 }
 
-.hoje {
-    background-color: rgba(208, 208, 208, 1);
+.hoje, .tribe-events-button {
+    background-color: rgba(208, 208, 208, 1) !important;
+    border: 2px solid black !important;
+    padding: .375rem .75rem !important;
+    border-radius: 8px !important;
 }
 
 .card-title {
@@ -163,4 +166,71 @@ path {
     .thumbnail {
         width: 50% !important;
     }
+}
+
+/* The Events Calendar */
+
+.tribe-events-cal-links{
+    display: flex !important;
+    justify-content: end;
+    margin: 0 !important;
+}
+
+.tribe-events-header__messages{
+    background-color: var(--secondary);
+}
+
+.tribe-events-notices{
+    background-color: var(--secondary);
+    border: 0 !important;
+    text-align: center !important;
+    padding: 1em !important;
+}
+
+.tribe-events-notices ul li {
+    text-align: center;
+}
+
+.tribe-events-cal-links a{
+    background-image: none !important;
+    color: black;
+}
+
+.tribe-event-date-start, .tribe-event-time{
+    font-size: 24px !important;
+}
+
+.tribe-events-event-meta:before, .tribe-events-event-meta~div:not(.tribe-events-event-meta,.event-tickets){
+    border: none !important;
+}
+
+.tribe-events-event-image{
+    display: flex;
+    justify-content: center;
+}
+
+.tribe-events-event-image img{
+    max-height: 240px;
+    max-width: 240px;
+}
+
+.tribe-events-calendar-month__calendar-event-details{
+    background-color: var(--primary);
+    opacity: 1 !important;
+}
+
+/* .tribe-events-calendar-month__body{
+    border-radius: 12px;
+}
+
+.tribe-events-calendar-month__week:first-child{
+    border-radius: 12px 12px 0 0;
+}
+
+.tribe-events-calendar-month__week:last-child{
+    border-radius: 0 0 12px 12px;
+} */
+
+.tribe-events-calendar-month__body, .tribe-events-calendar-month__week, .tribe-events-calendar-month__day{
+    border-color: black !important;
 }

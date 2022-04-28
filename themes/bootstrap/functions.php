@@ -21,3 +21,9 @@ function themebs_enqueue_scripts() {
   array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'themebs_enqueue_scripts');
+
+function add_featured_image_support_to_your_wordpress_theme() {
+	add_theme_support( 'post-thumbnails' );
+}
+
+add_action( 'after_setup_theme', 'add_featured_image_support_to_your_wordpress_theme' );
