@@ -54,8 +54,6 @@ if ( empty( $disable_event_search ) ) {
 
 			<?php $this->template( 'components/breadcrumbs' ); ?>
 
-			<?php $this->template( 'components/events-bar' ); ?>
-
 			<?php $this->template( 'month/top-bar' ); ?>
 		</header>
 

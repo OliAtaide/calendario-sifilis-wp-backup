@@ -36,7 +36,7 @@
 	>
 		<time
 			datetime="<?php echo esc_attr( $selected_start_datetime ); ?>"
-			class="tribe-events-c-top-bar__datepicker-time"
+			class="tribe-events-c-top-bar__datepicker-time d-flex"
 		>
 			<?php if ( $show_now ) : ?>
 				<span class="tribe-events-c-top-bar__datepicker-mobile">
@@ -53,6 +53,7 @@
 					<?php echo esc_html( $selected_start_date_label ); ?>
 				</span>
 			<?php endif; ?>
+			<i class="bi bi-calendar4 mx-3"></i>
 		</time>
 		<?php if ( $show_end ) : ?>
 			<span class="tribe-events-c-top-bar__datepicker-separator"> - </span>

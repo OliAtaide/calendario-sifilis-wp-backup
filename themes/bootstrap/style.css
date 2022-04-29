@@ -28,18 +28,21 @@ html{
     --secondary: #c96262ff;
 }
 
+nav{
+    top: 0;
+}
 
-.nav {
+.nav, .logos {
     border-width: 0;
+    background-color: rgba(var(--primary), 0.2);
 }
 
 .card,
-.aviso,
-.footer2 {
-    background-color: var(--secondary);
+.aviso{
+    background-color: rgb(var(--primary));
 }
 
-/* .footer1 {
+/* .expediente {
     height: 50px;
 }
 
@@ -50,8 +53,8 @@ html{
 .nav2,
 .data,
 .data-mb,
-.footer1 {
-    background-color: var(--primary);
+.expediente {
+    background-color: rgb(var(--primary));
 }
 
 .navbar-brand {
@@ -148,10 +151,10 @@ ul li {
 }
 
 path {
-    fill: var(--primary);
+    fill: rgb(var(--primary));
 }
 
-.hoje, .tribe-events-button {
+.hoje, .tribe-events-button, .alternar {
     background-color: rgba(208, 208, 208, 1) !important;
     border: 2px solid black !important;
     padding: .375rem .75rem !important;
@@ -168,6 +171,17 @@ path {
     }
 }
 
+/* Bootstrap */
+
+
+.dropdown-menu{
+    padding: 0.5em !important;
+}
+
+.dropdown-item{
+    padding: 0.5em !important;
+}
+
 /* The Events Calendar */
 
 .tribe-events-cal-links{
@@ -177,11 +191,11 @@ path {
 }
 
 .tribe-events-header__messages{
-    background-color: var(--secondary);
+    background-color: rgb(var(--secondary));
 }
 
 .tribe-events-notices{
-    background-color: var(--secondary);
+    background-color: rgb(var(--secondary));
     border: 0 !important;
     text-align: center !important;
     padding: 1em !important;
@@ -196,7 +210,7 @@ path {
     color: black;
 }
 
-.tribe-event-date-start, .tribe-event-time{
+.tribe-event-date-start, .tribe-event-time, .tribe-events-c-top-bar__datepicker-time{
     font-size: 24px !important;
 }
 
@@ -215,7 +229,7 @@ path {
 }
 
 .tribe-events-calendar-month__calendar-event-details{
-    background-color: var(--primary);
+    background-color: rgb(var(--primary));
     opacity: 1 !important;
 }
 
@@ -233,4 +247,17 @@ path {
 
 .tribe-events-calendar-month__body, .tribe-events-calendar-month__week, .tribe-events-calendar-month__day{
     border-color: black !important;
+}
+
+.tribe-events-c-top-bar__datepicker{
+    padding-left: 1em !important;
+}
+
+.tribe-events-header__events-bar{
+    width: auto !important;
+    margin-bottom: 1em !important;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container{
+    padding-top: 2em !important;
 }

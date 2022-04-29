@@ -22,5 +22,7 @@
 	<?php $this->template( 'list/top-bar/datepicker' ); ?>
 
 	<?php $this->template( 'components/top-bar/actions' ); ?>
+	
+	<?php $this->template( 'components/events-bar' ); ?>
 
 </div>

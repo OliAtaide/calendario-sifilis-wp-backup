@@ -45,7 +45,7 @@
   <nav class="">
     <div class="nav navbar navbar-expand-lg">
       <div class="container-fluid container py-0">
-        <a href="index.html" class="navbar-brand">
+        <a href="<?php echo home_url(); ?>" class="navbar-brand">
           <!-- d-inline d-sm-flex -->
           <div class="py-2 d-flex flex-column flex-sm-row align-items-center justify-content-center">
             <svg class="m-3" width="161" height="161" fill="none" version="1.1" viewBox="0 0 161 161" xmlns="http://www.w3.org/2000/svg">

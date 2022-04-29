@@ -1,6 +1,6 @@
 <footer>
   <footer class="pt-3">
-    <div class="footer1">
+    <div class="expediente">
       <div class="container py-5">
         <h6 class="text-center">
           <strong>
@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-    <div class="d-flex justify-content-center pb-3">
+    <div class="logos d-flex justify-content-center pb-3">
       <img src=<?php echo get_template_directory_uri() . "/imgs/footer.png" ?> class="img-fluid" alt="">
     </div>
   </footer>
