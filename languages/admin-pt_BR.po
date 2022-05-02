@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.9.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-23 23:05:34+0000\n"
+"PO-Revision-Date: 2022-05-01 12:49:37+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -5897,6 +5897,10 @@ msgstr "Sem permissão para anexar arquivos a este post."
 #: wp-admin/plugins.php:551
 msgid "https://wordpress.org/plugins/"
 msgstr "https://br.wordpress.org/plugins/"
+
+#: wp-admin/customize.php:238
+msgid "The Customizer allows you to preview changes to your site before publishing them. You can navigate to different pages on your site within the preview. Edit shortcuts are shown for some editable elements. The Customizer is intended for use with non-block themes."
+msgstr "O Personalizador permite que você visualize as alterações em seu site antes de publicá-las. Você pode navegar para diferentes páginas em seu site na visualização. Os atalhos de edição são mostrados para alguns elementos editáveis. O Personalizador destina-se ao uso com temas sem blocos."
 
 #: wp-admin/customize.php:72 wp-admin/customize.php:81
 msgid "Customize New Changes"

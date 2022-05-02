@@ -24,21 +24,8 @@ $event_day_num   = $event->dates->start_display->format_i18n('j');
 $event_year      = $event->dates->start_display->format_i18n('Y');
 $event_date_attr = $event->dates->start_display->format(Dates::DBDATEFORMAT);
 ?>
-<!-- <div class="tribe-events-calendar-latest-past__event-date-tag tribe-common-g-col">
-	<time class="tribe-events-calendar-latest-past__event-date-tag-datetime" datetime="<?php echo esc_attr($event_date_attr); ?>" aria-hidden="true">
-		<span class="tribe-events-calendar-latest-past__event-date-tag-month">
-			<?php echo esc_html($event_month); ?>
-		</span>
-		<span class="tribe-events-calendar-latest-past__event-date-tag-daynum tribe-common-h5 tribe-common-h4--min-medium">
-			<?php echo esc_html($event_day_num); ?>
-		</span>
-		<span class="tribe-events-calendar-latest-past__event-date-tag-year">
-			<?php echo esc_html($event_year); ?>
-		</span>
-	</time>
-</div> -->
 <div class="col-2 d-sm-flex d-none">
-	<time class="data rounded-circle text-center" datetime="<?php echo esc_attr($event_date_attr); ?>" aria-hidden="true">
+	<time class="data p-1 rounded-circle text-center" datetime="<?php echo esc_attr($event_date_attr); ?>" aria-hidden="true">
 		<span class="mes">
 			<?php echo esc_html($event_month); ?>
 		</span>

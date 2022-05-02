@@ -15,7 +15,6 @@
 ?>
 <div class="tribe-events-c-top-bar tribe-events-header__top-bar">
 
-	<!-- <?php $this->template( 'list/top-bar/nav' ); ?> -->
 
 	<?php $this->template( 'components/top-bar/today' ); ?>
 

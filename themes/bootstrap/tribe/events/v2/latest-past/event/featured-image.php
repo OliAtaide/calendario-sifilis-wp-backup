@@ -21,12 +21,12 @@ if ( ! $event->thumbnail->exists ) {
 }
 
 ?>
-<div class="tribe-events-calendar-latest-past__event-featured-image-wrapper tribe-common-g-col">
+<div class="">
 	<a
 		href="<?php echo esc_url( $event->permalink ); ?>"
 		title="<?php echo esc_attr( $event->title ); ?>"
 		rel="bookmark"
-		class="tribe-events-calendar-latest-past__event-featured-image-link"
+		class=""
 		tabindex="-1"
 		aria-hidden="true"
 	>
@@ -41,7 +41,7 @@ if ( ! $event->thumbnail->exists ) {
 			<?php if ( ! empty( $event->thumbnail->title ) ) : ?>
 				title="<?php echo esc_attr( $event->thumbnail->title ); ?>"
 			<?php endif; ?>
-			class="tribe-events-calendar-latest-past__event-featured-image"
+			class="img-fluid p-3 rounded-3"
 		/>
 	</a>
 </div>
