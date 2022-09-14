@@ -30,3 +30,13 @@ add_action( 'after_setup_theme', 'add_featured_image_support_to_your_wordpress_t
 
 if ( function_exists('register_sidebar') )
 register_sidebar();
+
+//WPML - Add a floating language switcher to the footer
+// add_action('wp_footer', 'wpml_floating_language_switcher'); 
+  
+// function wpml_floating_language_switcher() { 
+//   echo '<div class="wpml-floating-language-switcher">';
+       //PHP action to display the language switcher (see https://wpml.org/documentation/getting-started-guide/language-setup/language-switcher-options/#using-php-actions)
+//       do_action('wpml_add_language_selector');
+//   echo '</div>'; 
+//}

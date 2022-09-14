@@ -302,3 +302,19 @@ path {
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-day__event:before{
     display: none;
 }
+
+.wpml-ls-native{
+    color: black;
+}
+
+.wpml-ls-native:hover{
+    color: rgb(var(--secondary));
+}
+
+.wpml-ls-display{
+    display: none;
+}
+
+.wpml-ls-current-language {
+    font-weight: bold;
+}

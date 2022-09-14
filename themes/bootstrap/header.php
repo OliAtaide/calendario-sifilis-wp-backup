@@ -132,34 +132,9 @@
             </li>
           </ul>
         </div>
-        <select class="w-50 form-select d-sm-none bg-transparent border-0" aria-label="Default select example">
-          <option selected>Português</option>
-          <option value="1">English</option>
-          <option value="2">Español</option>
-          <option value="3">Français</option>
-        </select>
-        <ul class="navbar-nav d-none d-sm-flex">
-          <li class="nav-item">
-            <a href="" class="nav-link">
-              Português
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">
-              English
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">
-              Español
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">
-              Français
-            </a>
-          </li>
-        </ul>
+        <div class="navbar-nav d-none d-sm-flex">
+          <?php echo do_action('wpml_add_language_selector'); ?>
+        </div>
       </div>
     </div>
   </nav>
