@@ -1,4 +1,5 @@
 <?php
+
 /**
  * View: List View - Single Event Date Tag
  *
@@ -25,21 +26,30 @@ use Tribe__Date_Utils as Dates;
  * If the request date is after the event start date, show the request date to avoid users from seeing dates "in the
  * past" in relation to the date they requested (or today's date).
  */
-$display_date = empty( $is_past ) && ! empty( $request_date )
-	? max( $event->dates->start_display, $request_date )
+
+$display_date = empty($is_past) && !empty($request_date)
+	? max($event->dates->start_display, $request_date)
 	: $event->dates->start_display;
 
-$event_week_day  = $display_date->format_i18n( 'D' );
-$event_day_num   = $display_date->format_i18n( 'j' );
-$event_date_attr = $display_date->format( Dates::DBDATEFORMAT );
+$event_month     = $event->dates->start_display->format_i18n('M');
+$event_day_num   = $event->dates->start_display->format_i18n('j');
+$event_year      = $event->dates->start_display->format_i18n('Y');
+$event_date_attr = $event->dates->start_display->format(Dates::DBDATEFORMAT);
 ?>
-<div class="tribe-events-calendar-list__event-date-tag tribe-common-g-col">
-	<time class="tribe-events-calendar-list__event-date-tag-datetime" datetime="<?php echo esc_attr( $event_date_attr ); ?>" aria-hidden="true">
-		<span class="tribe-events-calendar-list__event-date-tag-weekday">
-			<?php echo esc_html( $event_week_day ); ?>
+<div class="col-2 d-sm-flex d-none">
+	<time class="data p-1 rounded-circle text-center" datetime="<?php echo esc_attr($event_date_attr); ?>" aria-hidden="true">
+		<span class="mes">
+			<?php echo esc_html($event_month); ?>
 		</span>
-		<span class="tribe-events-calendar-list__event-date-tag-daynum tribe-common-h5 tribe-common-h4--min-medium">
-			<?php echo esc_html( $event_day_num ); ?>
+		<br>
+		<span class="dia">
+			<strong>
+				<?php echo esc_html($event_day_num); ?>
+			</strong>
+		</span>
+		<br>
+		<span class="ano">
+			<?php echo esc_html($event_year); ?>
 		</span>
 	</time>
 </div>

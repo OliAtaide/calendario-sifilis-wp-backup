@@ -25,18 +25,11 @@ if ( ! empty( $event->featured ) ) {
 <article <?php tribe_classes( $classes ); ?>>
 	<div class="tribe-events-calendar-day__event-content tribe-common-g-col">
 
-		<?php $this->template( 'day/event/featured-image', [ 'event' => $event ] ); ?>
-
 		<div class="tribe-events-calendar-day__event-details">
 
 			<header class="tribe-events-calendar-day__event-header">
-				<?php $this->template( 'day/event/date', [ 'event' => $event ] ); ?>
 				<?php $this->template( 'day/event/title', [ 'event' => $event ] ); ?>
-				<?php $this->template( 'day/event/venue', [ 'event' => $event ] ); ?>
 			</header>
-
-			<?php $this->template( 'day/event/description', [ 'event' => $event ] ); ?>
-			<?php $this->template( 'day/event/cost', [ 'event' => $event ] ); ?>
 
 		</div>
 

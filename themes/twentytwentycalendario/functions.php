@@ -793,7 +793,7 @@ function themebs_enqueue_styles() {
   wp_enqueue_style('bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
   wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.bundle.min.js');
   wp_enqueue_script( 'jquery' );
-  wp_enqueue_style( 'core', get_stylesheet_directory_uri() . '/style.css' );
+//   wp_enqueue_style( 'core', get_stylesheet_directory_uri() . '/style.css' );
   wp_enqueue_script('core', get_stylesheet_directory_uri() . '/script.js');
 }
 add_action( 'wp_enqueue_scripts', 'themebs_enqueue_styles', 99);

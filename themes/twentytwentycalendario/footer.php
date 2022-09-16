@@ -12,54 +12,66 @@
  */
 
 ?>
-			<footer id="site-footer" class="header-footer-group">
-
-				<div class="section-inner">
-
-					<div class="footer-credits">
-
-						<p class="footer-copyright">&copy;
-							<?php
-							echo date_i18n(
-								/* translators: Copyright date format, see https://www.php.net/manual/datetime.format.php */
-								_x( 'Y', 'copyright date format', 'twentytwenty' )
-							);
-							?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						</p><!-- .footer-copyright -->
-
-						<?php
-						if ( function_exists( 'the_privacy_policy_link' ) ) {
-							the_privacy_policy_link( '<p class="privacy-policy">', '</p>' );
-						}
-						?>
-
-						<p class="powered-by-wordpress">
-							<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentytwenty' ) ); ?>">
-								<?php _e( 'Powered by WordPress', 'twentytwenty' ); ?>
-							</a>
-						</p><!-- .powered-by-wordpress -->
-
-					</div><!-- .footer-credits -->
-
-					<a class="to-the-top" href="#site-header">
-						<span class="to-the-top-long">
-							<?php
-							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
-							?>
-						</span><!-- .to-the-top-long -->
-						<span class="to-the-top-short">
-							<?php
-							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'Up %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
-							?>
-						</span><!-- .to-the-top-short -->
-					</a><!-- .to-the-top -->
-
-				</div><!-- .section-inner -->
-
-			</footer><!-- #site-footer -->
+<footer>
+  <footer class="pt-3">
+    <div class="expediente">
+      <div class="container py-5">
+        <h6 class="text-center">
+          <strong>
+            EXPEDIENTE
+          </strong>
+        </h6>
+        <div class="row pt-3">
+          <div class="col text-center">
+            <small>
+              Mauro Romero Leal Passos (RJ)
+              <br>
+              <b>Idealização, pesquisa e texto</b>
+            </small>
+          </div>
+          <div class="col text-center">
+            <small>
+              Maria Luiza Bazzo (SC)
+              Ricardo de Souza Carvalho (RJ)
+              Simoni Mariano Pinheiro (RJ)
+              <br>
+              <b>Colaboração na pesquisa</b>
+            </small>
+          </div>
+          <div class="col text-center">
+            <small>
+              Fabíola Gonçalves (RN)
+              José Eleutério Júnior (CE)
+              <br>
+              <b>Revisão</b>
+            </small>
+          </div>
+          <div class="col text-center">
+            <small>
+              Anderson Gomes do
+              Nascimento (RN)
+              <br>
+              <b>Arte</b>
+            </small>
+          </div>
+          <div class="col text-center">
+            <small>
+              Anderson Gomes do Nascimento (RN)
+              Mauricio da Silva Oliveira Jr. (RN)
+              Mariana de Araújo Figueiredo (RN)
+              <br>
+              <b>Programação</b>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logos d-flex justify-content-center pb-3">
+      <img src=<?php echo get_template_directory_uri() . "/imgs/footer.png" ?> class="img-fluid" alt="">
+    </div>
+  </footer>
+</footer>
+			
 
 		<?php wp_footer(); ?>
 

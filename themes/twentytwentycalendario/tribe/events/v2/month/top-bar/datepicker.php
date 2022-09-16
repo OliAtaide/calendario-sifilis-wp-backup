@@ -36,7 +36,7 @@ $datepicker_date     = Dates::build_date_object( $selected_date_value )->format(
 	>
 		<time
 			datetime="<?php echo esc_attr( $the_date->format( 'Y-m' ) ); ?>"
-			class="tribe-events-c-top-bar__datepicker-time"
+			class="tribe-events-c-top-bar__datepicker-time d-flex"
 		>
 			<span class="tribe-events-c-top-bar__datepicker-mobile">
 				<?php echo esc_html( $formatted_grid_date_mobile ); ?>
@@ -44,6 +44,7 @@ $datepicker_date     = Dates::build_date_object( $selected_date_value )->format(
 			<span class="tribe-events-c-top-bar__datepicker-desktop tribe-common-a11y-hidden">
 				<?php echo esc_html( $formatted_grid_date ); ?>
 			</span>
+			<i class="bi bi-calendar4 mx-3"></i>
 		</time>
 		<?php $this->template( 'components/icons/caret-down', [ 'classes' => [ 'tribe-events-c-top-bar__datepicker-button-icon-svg' ] ] ); ?>
 	</button>

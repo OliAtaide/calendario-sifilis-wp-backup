@@ -1,22 +1,3 @@
-<?php
-
-/**
- * View: Events Bar Views List Item
- *
- * Override this template in your own theme by creating a file at:
- * [your-theme]/tribe/events/v2/components/events-bar/views/list/item.php
- *
- * See more documentation about our views templating system.
- *
- * @link http://evnt.is/1aiy
- *
- * @var string $view_slug        Slug of the current view.
- * @var string $public_view_slug Slug of the view currently being listed.
- * @var object $public_view_data Data of the view currently being listed.
- *
- * @version 5.3.0
- */
-
 $list_item_classes = ['tribe-events-c-view-selector__list-item', "tribe-events-c-view-selector__list-item--$public_view_slug"];
 if ($view_slug === $public_view_slug) {
 	$list_item_classes[] = 'tribe-events-c-view-selector__list-item--active';
@@ -33,12 +14,3 @@ if ($view_slug === $public_view_slug) {
 		</span>
 	</a>
 </li> -->
-
-
-<li class="<?php echo esc_attr(implode(' ', $list_item_classes)); ?>">
-	<a class="dropdown-item" href="<?php echo esc_url($public_view_data->view_url); ?>">
-		<span class="">
-			<?php echo esc_html($public_view_data->view_label); ?>
-		</span>
-	</a>
-</li>

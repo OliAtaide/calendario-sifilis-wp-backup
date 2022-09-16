@@ -15,12 +15,13 @@
 ?>
 <div class="tribe-events-c-top-bar tribe-events-header__top-bar">
 
-	<!-- <?php $this->template( 'list/top-bar/nav' ); ?> -->
 
 	<?php $this->template( 'components/top-bar/today' ); ?>
 
 	<?php $this->template( 'list/top-bar/datepicker' ); ?>
 
 	<?php $this->template( 'components/top-bar/actions' ); ?>
+	
+	<?php $this->template( 'components/events-bar' ); ?>
 
 </div>
