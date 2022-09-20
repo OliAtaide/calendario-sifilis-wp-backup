@@ -64,8 +64,6 @@ if ( $hide_weekends ) {
 
 			<?php $this->template( 'components/breadcrumbs' ); ?>
 
-			<?php $this->template( 'components/events-bar' ); ?>
-
 			<?php $this->template( 'week/top-bar' ); ?>
 		</header>
 

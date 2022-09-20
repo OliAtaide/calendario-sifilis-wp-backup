@@ -53,23 +53,22 @@ if (empty($disable_event_search)) {
 
 
 		<?php if (sizeof($events) != 0) : ?>
-			<table class="table table-bordered border-dark">
-				<trh>
+			<table class="table day-table">
+				<tr>
 					<th>
-						Dia
+						<?php echo date('j'); ?>
 					</th>
+				</tr>
+				<?php foreach ($events as $event) : ?>
+					<tr>
+						<?php $this->setup_postdata($event); ?>
+
+						<td>
+							<?php $this->template('day/event', ['event' => $event]); ?>
+						</td>
+
 					</tr>
-
-					<?php foreach ($events as $event) : ?>
-						<tr>
-							<?php $this->setup_postdata($event); ?>
-
-							<td>
-								<?php $this->template('day/event', ['event' => $event]); ?>
-							</td>
-
-						</tr>
-					<?php endforeach; ?>
+				<?php endforeach; ?>
 			</table>
 		<?php endif; ?>
 

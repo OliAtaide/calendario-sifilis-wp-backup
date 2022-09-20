@@ -114,38 +114,9 @@ img,
     border: 1px solid black;
 }
 
-table {
-    border-collapse: separate;
-    border: 1px solid black;
-    border-radius: 6px;
-    table-layout: fixed;
-    background-color: #F2F2F2;
-}
-
-td,
-th {
-    border-left: solid black 1px;
-}
-
-th {
-    border-top: none;
-}
-
-td {
-    border-bottom: none;
-}
-
 td:first-child,
 th:first-child {
     border-left: none;
-}
-
-td ul {
-    min-height: 400px;
-}
-
-ul li {
-    list-style: none;
 }
 
 .dropdown-menu.show {
@@ -179,13 +150,7 @@ path {
     }
 }
 
-.table{
-    border: 1px solid black !important;
-}
 
-.table tr th{
-    border-bottom: 1px solid black !important;
-}
 
 /* Bootstrap */
 
@@ -243,10 +208,10 @@ path {
     justify-content: center;
 }
 
-.tribe-events-event-image img{
+/* .tribe-events-event-image img{
     max-height: 240px;
     max-width: 240px;
-}
+} */
 
 .tribe-events-calendar-month__calendar-event-details, .tribe-events-calendar-day__event-content {
     background-color: rgb(var(--primary));
@@ -259,19 +224,6 @@ path {
     margin: 0 !important;
     display: block !important;
 }
-
-
-/* .tribe-events-calendar-month__body{
-    border-radius: 12px;
-}
-
-.tribe-events-calendar-month__week:first-child{
-    border-radius: 12px 12px 0 0;
-}
-
-.tribe-events-calendar-month__week:last-child{
-    border-radius: 0 0 12px 12px;
-} */
 
 .tribe-events-calendar-month__body, .tribe-events-calendar-month__week, .tribe-events-calendar-month__day{
     border-color: black !important;
@@ -399,3 +351,29 @@ path {
     border-left: 1px solid black !important;
 }
 
+.tribe-events-pro-week-grid__event-link, .tribe-events-pro-week-grid__event-link-inner{
+    background-color: rgb(var(--primary)) !important;
+}
+
+.tribe-events-calendar-day{
+    border: 1px solid black !important;
+}
+
+table {
+    border-collapse: separate !important;
+    border: 1px solid black !important;
+    border-radius: 12px;
+    background-color: #F2F2F2;
+}
+
+th {
+    border-bottom: 1px solid black !important;
+}
+
+td ul {
+    min-height: 400px;
+}
+
+ul li {
+    list-style: none;
+}
