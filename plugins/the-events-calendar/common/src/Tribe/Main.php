@@ -5,6 +5,7 @@
 
 // Don't load directly
 
+use Tribe\Admin\Settings;
 use Tribe\DB_Lock;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,7 +20,9 @@ class Tribe__Main {
 	const EVENTSERROROPT      = '_tribe_events_errors';
 	const OPTIONNAME          = 'tribe_events_calendar_options';
 	const OPTIONNAMENETWORK   = 'tribe_events_calendar_network_options';
-	const VERSION             = '4.14.18.1';
+
+	const VERSION             = '5.0.0.1';
+
 	const FEED_URL            = 'https://theeventscalendar.com/feed/';
 
 	protected $plugin_context;
@@ -134,7 +137,10 @@ class Tribe__Main {
 
 		$autoloader = Tribe__Autoloader::instance();
 
-		$prefixes = [ 'Tribe__' => dirname( __FILE__ ) ];
+		$prefixes = [
+				'TEC\\Common\\' => dirname( __DIR__ ) . '/Common',
+				'Tribe__'       => __DIR__,
+		];
 		$autoloader->register_prefixes( $prefixes );
 
 		foreach ( glob( $this->plugin_path . 'src/deprecated/*.php' ) as $file ) {
@@ -181,6 +187,7 @@ class Tribe__Main {
 		require_once $this->plugin_path . 'src/functions/url.php';
 		require_once $this->plugin_path . 'src/functions/query.php';
 		require_once $this->plugin_path . 'src/functions/multibyte.php';
+		require_once $this->plugin_path . 'src/functions/files.php';
 		require_once $this->plugin_path . 'src/functions/template-tags/general.php';
 		require_once $this->plugin_path . 'src/functions/template-tags/date.php';
 		require_once $this->plugin_path . 'src/functions/template-tags/html.php';
@@ -247,7 +254,7 @@ class Tribe__Main {
 			[
 				[ 'tribe-ui', 'tribe-ui.css', [ 'tec-variables-full' ] ],
 				[ 'tribe-buttonset', 'buttonset.js', [ 'jquery', 'underscore' ] ],
-				[ 'tribe-common-admin', 'tribe-common-admin.css', [ 'tec-variables-full', 'tribe-dependency-style', 'tribe-bumpdown-css', 'tribe-buttonset-style', 'tribe-select2-css' ] ],
+				[ 'tribe-common-admin', 'tribe-common-admin.css', [ 'tec-variables-skeleton', 'tec-variables-full', 'tribe-dependency-style', 'tribe-bumpdown-css', 'tribe-buttonset-style', 'tribe-select2-css' ] ],
 				[ 'tribe-validation', 'validation.js', [ 'jquery', 'underscore', 'tribe-common', 'tribe-utils-camelcase', 'tribe-tooltipster' ] ],
 				[ 'tribe-validation-style', 'validation.css', [ 'tec-variables-full', 'tribe-tooltipster-css' ] ],
 				[ 'tribe-dependency', 'dependency.js', [ 'jquery', 'underscore', 'tribe-common' ] ],
@@ -285,6 +292,17 @@ class Tribe__Main {
 			]
 		);
 
+		tribe_asset(
+			$this,
+			'tec-admin-settings-image-field',
+			'admin-image-field.js',
+			[ 'jquery' ],
+			'in_admin_footer',
+			[
+				'conditionals' => [ tribe( Settings::class ), 'should_load_image_field_assets' ]
+			]
+		);
+
 		// Register the asset for Customizer controls.
 		tribe_asset(
 			$this,
@@ -292,6 +310,18 @@ class Tribe__Main {
 			'customizer-controls.css',
 			[ 'tec-variables-full' ],
 			'customize_controls_print_styles'
+		);
+
+		// Register the asset for color fields.
+		tribe_asset(
+			$this,
+			'tec-settings-color-field',
+			'admin-color-field.js',
+			[ 'jquery', 'wp-color-picker' ],
+			'admin_footer',
+			[
+				'conditionals' => [ tribe( Settings::class ), 'should_load_color_field_assets' ]
+			]
 		);
 
 		tribe( Tribe__Admin__Help_Page::class )->register_assets();
@@ -672,7 +702,9 @@ class Tribe__Main {
 		tribe_singleton( \Tribe\Admin\Troubleshooting::class, \Tribe\Admin\Troubleshooting::class, [ 'hook' ] );
 
 		tribe_singleton( 'callback', 'Tribe__Utils__Callback' );
-		tribe_singleton( Tribe__Admin__Help_Page::class, Tribe__Admin__Help_Page::class );
+		tribe_singleton( Tribe__Admin__Help_Page::class, Tribe__Admin__Help_Page::class, [ 'hook' ] );
+		tribe_singleton( 'admin.pages', '\Tribe\Admin\Pages' );
+		tribe_singleton( 'admin.activation.page', 'Tribe__Admin__Activation_Page' );
 
 		tribe_register_provider( Tribe__Editor__Provider::class );
 		tribe_register_provider( Tribe__Service_Providers__Debug_Bar::class );

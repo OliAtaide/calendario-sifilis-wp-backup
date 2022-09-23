@@ -211,7 +211,14 @@ path {
 /* .tribe-events-event-image img{
     max-height: 240px;
     max-width: 240px;
-} */
+} 
+*/
+.event_card img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 .tribe-events-calendar-month__calendar-event-details, .tribe-events-calendar-day__event-content {
     background-color: rgb(var(--primary));
@@ -341,10 +348,16 @@ path {
     padding: 0 !important;
 }
 
-.tribe-events-pro-week-grid__header-column-daynum{
+.tribe-events-pro-week-grid__header-column-daynum,
+.tribe-events-calendar-month__day-date-daynum{
     text-align: left !important;
     font-weight: 400 !important;
     width: 100%;
+}
+
+.day_table-daynum{
+    font-size: 24px;
+    font-weight: 400;
 }
 
 .tribe-events-pro-week-grid__events-day:not(:first-child){
@@ -359,21 +372,27 @@ path {
     border: 1px solid black !important;
 }
 
-table {
+.day_table {
     border-collapse: separate !important;
     border: 1px solid black !important;
     border-radius: 12px;
     background-color: #F2F2F2;
 }
 
-th {
+.day_table th {
     border-bottom: 1px solid black !important;
 }
 
-td ul {
+.day_table td ul {
     min-height: 400px;
 }
 
-ul li {
+.day_table ul li {
     list-style: none;
+}
+
+.tribe-events-calendar-latest-past img,
+.tribe-events-calendar-list img{
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }

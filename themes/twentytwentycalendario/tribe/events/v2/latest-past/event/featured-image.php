@@ -26,7 +26,7 @@ if ( ! $event->thumbnail->exists ) {
 		href="<?php echo esc_url( $event->permalink ); ?>"
 		title="<?php echo esc_attr( $event->title ); ?>"
 		rel="bookmark"
-		class=""
+		class=" ratio ratio-1x1"
 		tabindex="-1"
 		aria-hidden="true"
 	>
@@ -41,7 +41,7 @@ if ( ! $event->thumbnail->exists ) {
 			<?php if ( ! empty( $event->thumbnail->title ) ) : ?>
 				title="<?php echo esc_attr( $event->thumbnail->title ); ?>"
 			<?php endif; ?>
-			class="img-fluid p-3 rounded-3"
+			class="img-fluid p-3 rounded-3 ratio ratio-1x1"
 		/>
 	</a>
 </div>

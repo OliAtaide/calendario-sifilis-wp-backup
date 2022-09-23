@@ -2,20 +2,22 @@
 # This file is distributed under the same license as the Themes - Understrap package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-03 08:33:29+0000\n"
+"PO-Revision-Date: 2022-07-03 04:42:54+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"X-Generator: GlotPress/4.0.0-alpha.1\n"
 "Language: es\n"
 "Project-Id-Version: Themes - Understrap\n"
 
 #. Description of the theme
+#, gp-priority: high
 msgid "The renowned WordPress starter theme framework that combined Underscores and Bootstrap. Trusted by more than 100,000 developers for building handcrafted, custom WordPress sites."
 msgstr "El famoso framework de tema  de inicio para WordPress que combina Underscores y Bootstrap. Con la confianza de más de 100.000 desarrolladores para crear sitios WordPress hechos a mano y personalizados."
 
 #. Theme Name of the theme
+#, gp-priority: high
 msgid "Understrap"
 msgstr "Understrap"
 
@@ -25,11 +27,11 @@ msgstr "Fuera del lienzo"
 
 #: inc/customizer.php:152
 msgid "Collapse"
-msgstr "Colapsable"
+msgstr "Contraíble"
 
 #: inc/customizer.php:143
 msgid "Choose between an expanding and collapsing navbar or an offcanvas drawer."
-msgstr "Elige entre una barra de navegación expansible y colapsable o un cajón fuera del lienzo."
+msgstr "Elige entre una barra de navegación ampliable y contraíble o un cajón fuera del lienzo."
 
 #: inc/customizer.php:142
 msgid "Responsive Navigation Type"
@@ -766,14 +768,17 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr "¡Vaya! No se ha podido encontrar esa página."
 
 #. Author URI of the theme
+#, gp-priority: low
 msgid "https://howarddc.com"
 msgstr "https://howarddc.com"
 
 #. Author of the theme
+#, gp-priority: low
 msgid "Howard Development &amp; Consulting"
 msgstr "Howard Development &amp; Consulting"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
+#, gp-priority: low
 msgid "https://understrap.com"
 msgstr "https://understrap.com"

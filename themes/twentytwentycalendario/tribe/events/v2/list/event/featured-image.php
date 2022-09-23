@@ -40,7 +40,7 @@ if ( ! $event->thumbnail->exists ) {
 			<?php if ( ! empty( $event->thumbnail->title ) ) : ?>
 				title="<?php echo esc_attr( $event->thumbnail->title ); ?>"
 			<?php endif; ?>
-			class="img-fluid p-3 rounded-3"
+			class="img-fluid p-3 rounded-3 ratio ratio-1x1"
 		/>
 	</a>
 </div>

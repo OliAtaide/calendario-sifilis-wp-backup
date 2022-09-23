@@ -53,10 +53,12 @@ if (empty($disable_event_search)) {
 
 
 		<?php if (sizeof($events) != 0) : ?>
-			<table class="table day-table">
+			<table class="table day_table">
 				<tr>
 					<th>
-						<?php echo date('j'); ?>
+						<span class="day_table-daynum">
+							<?php echo date('j'); ?>
+						</span>
 					</th>
 				</tr>
 				<?php foreach ($events as $event) : ?>
@@ -66,7 +68,6 @@ if (empty($disable_event_search)) {
 						<td>
 							<?php $this->template('day/event', ['event' => $event]); ?>
 						</td>
-
 					</tr>
 				<?php endforeach; ?>
 			</table>

@@ -30,7 +30,7 @@ $view_selector_classes = [
 		<?php printf(esc_html__('%s Views Navigation', 'the-events-calendar'), tribe_get_event_label_singular()); ?>
 	</h3>
 	<div <?php tribe_classes($view_selector_classes); ?> data-js="tribe-events-view-selector">
-		<button class="tribe-events-c-view-selector__button" data-js="tribe-events-view-selector-button">
+		<!-- <button class="tribe-events-c-view-selector__button" data-js="tribe-events-view-selector-button">
 			<span class="tribe-events-c-view-selector__button-icon">
 				<?php $this->template('components/icons/' . esc_attr($view_slug), ['classes' => ['tribe-events-c-view-selector__button-icon-svg']]); ?>
 			</span>
@@ -38,7 +38,7 @@ $view_selector_classes = [
 				<?php echo esc_html($view_label); ?>
 			</span>
 			<?php $this->template('components/icons/caret-down', ['classes' => ['tribe-events-c-view-selector__button-icon-caret-svg']]); ?>
-		</button>
+		</button> -->
 		<?php $this->template('components/events-bar/views/list'); ?>
 	</div>
 </div>

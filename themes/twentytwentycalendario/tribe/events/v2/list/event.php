@@ -34,7 +34,7 @@ $event_classes = tribe_get_post_class(['tribe-events-calendar-list__event', 'tri
 		</span>
 	</div>
 
-	<div class="card d-flex flex-column px-sm-4 py-2">
+	<div class="card d-flex flex-column px-sm-4 py-2 event_card">
 		<div class="row g-0">
 			<div class="col-md-10">
 				<div class="card-body">
