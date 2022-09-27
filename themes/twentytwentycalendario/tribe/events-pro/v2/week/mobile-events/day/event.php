@@ -1,4 +1,5 @@
 <?php
+
 /**
  * View: Week View Mobile Event
  *
@@ -17,24 +18,26 @@
  * @see tribe_get_event() for the additional properties added to the event post object.
  */
 
-$classes = [ 'tribe-common-g-row', 'tribe-common-g-row--gutters', 'tribe-events-pro-week-mobile-events__event' ];
-$classes = get_post_class( $classes, $event->ID );
+$classes = ['tribe-common-g-row', 'tribe-common-g-row--gutters', 'tribe-events-pro-week-mobile-events__event'];
+$classes = get_post_class($classes, $event->ID);
 
-if ( ! empty( $event->featured ) ) {
+if (!empty($event->featured)) {
 	$classes[] = 'tribe-events-pro-week-mobile-events__event--featured';
 }
 ?>
-<article <?php tribe_classes( $classes ) ?>>
+<article class="card py-3 mt-3">
 
-	<?php $this->template( 'week/mobile-events/day/event/featured-image', [ 'event' => $event ] ); ?>
+	<div class="card-body">
+		<?php $this->template('week/mobile-events/day/event/featured-image', ['event' => $event]); ?>
 
-	<div class="tribe-events-pro-week-mobile-events__event-details tribe-common-g-col">
+		<div class="">
 
-		<?php $this->template( 'week/mobile-events/day/event/date', [ 'event' => $event ] ); ?>
-		<?php $this->template( 'week/mobile-events/day/event/title', [ 'event' => $event ] ); ?>
-		<?php $this->template( 'week/mobile-events/day/event/venue', [ 'event' => $event ] ); ?>
-		<?php $this->template( 'week/mobile-events/day/event/cost', [ 'event' => $event ] ); ?>
+			<?php $this->template('week/mobile-events/day/event/date', ['event' => $event]); ?>
+			<?php $this->template('week/mobile-events/day/event/title', ['event' => $event]); ?>
+			<?php $this->template('week/mobile-events/day/event/venue', ['event' => $event]); ?>
+			<?php $this->template('week/mobile-events/day/event/cost', ['event' => $event]); ?>
 
+		</div>
 	</div>
 
 </article>

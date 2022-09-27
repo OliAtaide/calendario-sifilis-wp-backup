@@ -73,7 +73,7 @@ $title = apply_filters('tribe_events_single_event_title_html', the_title($before
 	<?php tribe_the_notices() ?>
 	<div class="card px-sm-3">
 		<div class="card-body d-flex flex-column">
-			<div class="d-flex">
+			<div class="d-sm-flex">
 				<h3 class="me-auto mb-2 mb-lg-0">
 					<strong>
 						<?php echo $title; ?>

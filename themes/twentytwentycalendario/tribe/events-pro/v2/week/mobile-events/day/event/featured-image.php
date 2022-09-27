@@ -39,7 +39,7 @@ if ( ! $event->thumbnail->exists ) {
 			<?php if ( ! empty( $event->thumbnail->title ) ) : ?>
 				title="<?php echo esc_attr( $event->thumbnail->title ); ?>"
 			<?php endif; ?>
-			class="tribe-events-pro-week-mobile-events__event-featured-image"
+			class="img-fluid rounded-3 ratio ratio-1x1"
 		/>
 	</a>
 </div>
